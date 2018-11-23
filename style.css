@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica;
+  background-color: #fdfdfd;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  right: 0;
+  bottom: 0;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  /* -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 59% 100%); */
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%);
+  z-index: -1;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #000;
+  font-weight: bold;
+  padding: 5px;
+  color: #6095ff;
+
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+
+.nav>ul a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.main {
+  margin-top: 100px;
+
+}
+
+h2 {
+  color: #5B6177;
+  margin-bottom: 25px;
+}
+
+.main {
+  width: 400px;
+}
+
+.box {
+  font-weight: bold;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 25px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .25);
+  color: #ccc;
+  font-size: 14px;
+  border: none;
+  border: 1px solid#f7f7f7;
+  outline: none;
+  width: 100%;
+
+}
+
+.date:before {
+
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 18px;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  }
+
+.box-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small {
+  width: 49%;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(to right, #8675FF, #6095FF);
+  padding: 10px;
+  color: #fff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .15);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+
+}
+
+.btn-border {
+  border: 1px solid #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .bg {
+    display: none;
+  }
+
+  .nav>ul a:hover {
+    color: #ccc;
+  }
+
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav ul a {
+    color: #000;
+  }
+}
+
+@media only screen and (max-width: 408px) {
+  .logo {
+    text-align: center;
+    flex-basis: 100%;
+    margin-left: -10px;
+  }
+
+  .nav ul {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+}
